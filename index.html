@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebDesignPastor Portfolio</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
 </head>
 <body>
-    <h1>Welcome to WebDesignPastor Portfolio</h1>
-    <p>Here you will find all the projects I have worked on.</p>
-    <p>Feel free to contact me if you have any questions.</p>
-    <p>Click on the links below to view my projects.</p>
-    <ul>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+<h1>Welcome to WebDesignPastor Portfolio</h1>
+<p>Here you will find all the projects I have worked on.</p>
+<p>Feel free to contact me if you have any questions.</p>
+<p>Click on the links below to view my projects.</p>
+
+<!-- Trigger button for loading projects.html using HTMX -->
+<button hx-get="projects.html" hx-target="#projects-section" hx-swap="innerHTML">
+    Load My Projects
+</button>
+
+<!-- Div to load the projects.html content into -->
+<div id="projects-section"></div>
+
+<ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
 </body>
 </html>
