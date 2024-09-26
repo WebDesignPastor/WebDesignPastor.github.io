@@ -35,7 +35,7 @@ jobs:
       # Step to replace the placeholder with the GitHub token
       - name: Replace placeholder with GitHub token
         run: |
-          sed -i 's/{{GH_TOKEN}}/'"${{ secrets.GH_PAT }}"'/g' index.html
+          sed -i 's/{{GH_TOKEN}}/'"${{ secrets.GH_TOKEN }}"'/g' index.html
           echo "Token placeholder replaced in index.html"
       
       - name: Setup Pages
