@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebDesignPastor Portfolio</title>
+        <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+        <link rel="stylesheet" href="index.css">
+
+    </head>
+    <body>
+        <h1>Welcome to WebDesignPastor Portfolio</h1>
+        <p>Here you will find all the projects I have worked on.</p>
+        <p>Feel free to contact me if you have any questions.</p>
+        <p>Click on the links below to view my projects.</p>
+
+        <button hx-get="sections/projects.html" hx-target="#projects-section" hx-swap="innerHTML">
+            Load My Projects
+        </button>
+
+        <div id="projects-section"></div>
+
+
+        <h1>Load JSON Data from GitHub</h1>
+        <div
+                hx-get="https://corsproxy.io/?https://api.github.com/repos/WebDesignPastor/WebDesignPastor.github.io/contents/projects.json"
+                hx-headers='{
+                    "Authorization": "Bearer {{GH_TOKEN}}",
+                    "Accept": "application/vnd.github.raw+json",
+                    "X-GitHub-Api-Version": "2022-11-28"
+                }'
+                hx-trigger="click"
+                hx-target="#output"
+        >
+            Click to Load JSON Data
+        </div>
+
+        <pre id="output"></pre>
+
+
+        <ul>
+            <li><a href="sections/technologies.html">Technologies</a></li>
+            <li><a href="sections/projects.html">Projects</a></li>
+            <li><a href="sections/blog.html">Blog</a></li>
+            <li><a href="sections/about.html">About</a></li>
+            <li><a href="sections/contact.html">Contact</a></li>
+        </ul>
+    </body>
+</html>

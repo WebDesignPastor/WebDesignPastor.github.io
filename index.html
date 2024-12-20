@@ -1,49 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WebDesignPastor Portfolio</title>
-        <script src="https://unpkg.com/htmx.org@1.9.2"></script>
-        <link rel="stylesheet" href="index.css">
-
-    </head>
-    <body>
-        <h1>Welcome to WebDesignPastor Portfolio</h1>
-        <p>Here you will find all the projects I have worked on.</p>
-        <p>Feel free to contact me if you have any questions.</p>
-        <p>Click on the links below to view my projects.</p>
-
-        <button hx-get="sections/projects.html" hx-target="#projects-section" hx-swap="innerHTML">
-            Load My Projects
-        </button>
-
-        <div id="projects-section"></div>
-
-
-        <h1>Load JSON Data from GitHub</h1>
-        <div
-                hx-get="https://corsproxy.io/?https://api.github.com/repos/WebDesignPastor/WebDesignPastor.github.io/contents/projects.json"
-                hx-headers='{
-                    "Authorization": "Bearer {{GH_TOKEN}}",
-                    "Accept": "application/vnd.github.raw+json",
-                    "X-GitHub-Api-Version": "2022-11-28"
-                }'
-                hx-trigger="click"
-                hx-target="#output"
-        >
-            Click to Load JSON Data
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidéo de Football au Centre</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+    <!-- Lien vers la bibliothèque Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <!-- Bouton Profil avec icône bonhomme -->
+        <button class="profil" onclick="window.location.href='profil.html'"><i class="fas fa-user"></i> Profil</button>
+        <!-- Bouton Accueil avec icône maison -->
+        <button class="accueil" onclick="window.location.href='index.html'"><i class="fas fa-home"></i> Accueil</button>
+    </div>
+    <div class="container">
+        <iframe src="https://www.youtube.com/embed/0BjlBnfHcHM" frameborder="0" allowfullscreen></iframe>
+        <!-- Flèche gauche -->
+        <button class="left-arrow"><i class="fas fa-chevron-left"></i></button>
+        <!-- Flèche droite -->
+        <button class="right-arrow"><i class="fas fa-chevron-right"></i></button>
+        <!-- Conteneur des autres boutons -->
+        <div class="buttons-container">
+            <button class="like-button"><i class="fas fa-thumbs-up"></i></button>
+            <button class="comment-button"><i class="fas fa-comment"></i></button>
+            <button class="share-button"><i class="fa fa-share-alt"></i></button>
+            <button class="volume-button"><i class="fa fa-volume-up"></i></button>
+            <button class="download-button"><i class="fa fa-download"></i></button>
         </div>
+    </div>
 
-        <pre id="output"></pre>
-
-
-        <ul>
-            <li><a href="sections/technologies.html">Technologies</a></li>
-            <li><a href="sections/projects.html">Projects</a></li>
-            <li><a href="sections/blog.html">Blog</a></li>
-            <li><a href="sections/about.html">About</a></li>
-            <li><a href="sections/contact.html">Contact</a></li>
-        </ul>
-    </body>
+    <!-- Barre de navigation des boutons "Connexion" et "S'inscrire" -->
+    <div class="navbar-bottom">
+        <button class="connexion" onclick="window.location.href='connexion.html'">Connexion</button>
+        <button class="inscription" onclick="window.location.href='inscription.html'">S'inscrire</button>
+    </div>
+</body>
 </html>

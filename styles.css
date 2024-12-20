@@ -1,0 +1,216 @@
+/* Style global pour le body et html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Conteneur pour la barre de navigation (les boutons en haut) */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Style pour le bouton Profil */
+.navbar .profil {
+    background-color: #007bff;
+}
+
+/* Style pour le bouton Accueil */
+.navbar .accueil {
+    background-color: #dc3545;
+}
+
+/* Style pour le bouton Connexion */
+.navbar .connexion {
+    background-color: #28a745; /* Vert pour Connexion */
+}
+
+/* Style pour le bouton S'inscrire */
+.navbar .inscription {
+    background-color: #ffc107; /* Jaune pour S'inscrire */
+}
+
+/* Style commun pour les boutons */
+.navbar button {
+    color: white;
+    font-size: 22px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Réduit la marge entre les boutons */
+    display: flex;
+    align-items: center;
+}
+
+/* Effet au survol du bouton */
+.navbar button:hover {
+    opacity: 0.8;
+}
+
+/* Icône dans le bouton */
+.navbar button i {
+    margin-right: 10px;
+}
+
+/* Conteneur pour la vidéo */
+.container {
+    margin-top: 80px;  /* Pour s'assurer que le contenu ne soit pas masqué sous la barre de navigation */
+    display: flex;
+    flex-direction: column;  /* Disposition en colonne pour mieux organiser les boutons en dessous de la vidéo */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Nécessaire pour la position des boutons */
+}
+
+/* Style pour l'iframe de la vidéo */
+iframe {
+    width: 80%;
+    height: 450px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espace entre la vidéo et les boutons */
+}
+
+/* Flèches gauche et droite */
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 50%; /* Centrer verticalement */
+    transform: translateY(-50%); /* Ajuster pour que les flèches soient parfaitement centrées */
+    background-color: rgba(0, 123, 255, 0.8); /* Couleur de fond avec un peu de transparence */
+    color: white;
+    font-size: 40px; /* Taille de l'icône */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Flèche gauche positionnée à gauche */
+.left-arrow {
+    left: 10px; /* Positionnée à gauche de la vidéo */
+}
+
+/* Flèche droite positionnée à droite */
+.right-arrow {
+    right: 10px; /* Positionnée à droite de la vidéo */
+}
+
+/* Changement de couleur au survol des flèches */
+.left-arrow:hover, .right-arrow:hover {
+    background-color: #1eb0d4; /* Couleur au survol des flèches */
+}
+
+/* Style des boutons J'aime, Commentaire, Partager, Volume, Télécharger */
+.buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+/* Boutons J'aime, Commentaire, Partager, Volume, Télécharger */
+.like-button, .comment-button, .share-button, .volume-button, .download-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 30px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;  /* Fixer une largeur uniforme */
+    height: 60px; /* Fixer une hauteur uniforme */
+}
+
+/* Changement de couleur au survol des boutons */
+.like-button:hover {
+    background-color: #0056b3;
+}
+
+.comment-button:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+}
+
+.share-button:hover {
+    background-color: #17a2b8; /* Bleu plus clair pour Partager */
+}
+
+.volume-button:hover {
+    background-color: #ffc107; /* Jaune pour Volume */
+}
+
+.download-button:hover {
+    background-color: #28a745; /* Vert pour Télécharger */
+}
+
+/* Ajout d'un petit espace entre les icônes dans les boutons */
+.like-button i, .comment-button i, .share-button i, .volume-button i, .download-button i {
+    margin-right: 0;
+}
+
+/* Optionnel : ajuster la taille des icônes si nécessaire */
+.like-button i, .comment-button i, .share-button i, .volume-button i, .download-button i {
+    font-size: 22px;
+}
+
+/* Conteneur pour la barre de navigation en bas */
+.navbar-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Style pour les boutons "Connexion" et "S'inscrire" */
+.navbar-bottom .connexion {
+    background-color: #45ddf1; /* Vert pour Connexion */
+}
+
+.navbar-bottom .inscription {
+    background-color: #ff1313; /* Jaune pour S'inscrire */
+}
+
+/* Style pour la barre de navigation en haut */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Style pour le bouton Profil avec icône */
+.navbar .profil i {
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+}
+
+/* Style pour le bouton Accueil avec icône */
+.navbar .accueil i {
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+}
+
+/* Autres styles restent inchangés... */
+
